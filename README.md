@@ -10,6 +10,7 @@ FILES CREATED AND USED
 6. data.py - clean the city and street name data and convert the data into csv files 
 7. create_db.py – create database from csv files
 8. queries.py – sql scripts to query the database
+9. sample.py - create a sample of the map for testing purposes
 
 
 AREA CHOSEN
