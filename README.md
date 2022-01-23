@@ -1,22 +1,24 @@
 # Wrangle_OpenStreetMap_MichelleBeckner
 Data Wrangling with MongoDB – C750 Project
 
+FILES CREATED AND USED
+1. audit.py - discover the number of various elements in the file
+2. tags.py – discover the type and number of tags in the file
+3. audit_city_names.py – discover the city names in the file
+4. audit_street_names.py – discover the street names in the file
+5. update.py - make suggested updates to the city and street names
+6. data.py - clean the city and street name data and convert the data into csv files 
+7. create_db.py – create database from csv files
+8. queries.py – sql scripts to query the database
 
-audit.py - discover the number of various elements in the file
-tags.py – discover the type and number of tags in the file
-audit_city_names.py – discover the city names in the file
-audit_street_names.py – discover the street names in the file
-update.py - make suggested updates to the city and street names
-data.py - clean the city and street name data and convert the data into csv files 
-create_db.py – create database from csv files
-queries.py – sql scripts to query the database
 
+EXPLORING AND CLEANING THE DATA
 
 I used Open Street Maps to export map data for my current town of Spartanburg, South Carolina. Using Python, I wanted to examine the data that was pulled. 
 
-The OSM file contain three main elements: nodes, ways, which and relations. I used the file audit.py to discover the number of various elements in the file:
+The OSM file contain three main elements: nodes, ways, and relations. I used the file audit.py to discover the number of various elements in the file:
 
-'bounds': 1,
+ 'bounds': 1,
  'member': 9897,
  'meta': 1,
  'nd': 951091,
@@ -118,6 +120,8 @@ Next, I wanted to see is the street names were consistent in naming of street ty
 
 I used update.py to make the suggested updates to the city and street names. The file contained a script to verify the name changes. 
 
+DATABASE CREATION AND ANALYSIS
+
 I used data.py to clean the city and street name data and convert the data into csv files that could be imported into a sql database. 
 
 I used create_db.py to create my database and load the newly created csv files into it. The file contained a script to count the number of nodes and ways. This count was compared to the count done on the osm file in the beginning of my analysis to verify that all the information was transferred over to the database.
@@ -125,17 +129,19 @@ I used create_db.py to create my database and load the newly created csv files i
 I used the queries.py file to run some analysis sql queries on the Spartanburg database. 
 
 The results of the queries were:
-Number of nodes:  824349
-Number of ways:  127549
-Number of unique users:  779
-Name and number of different religions:  [('christian', 43), ('jewish', 1)]
-Name and number of different cuisines:  [('mexican', 11), ('pizza', 8), ('burger', 7), ('american', 6), ('sandwiches', 5), ('regional', 5), ('japanese', 5), ('breakfast', 5), ('barbecue', 5), ('southern', 4), ('chinese', 4), ('thai', 3), ('sushi', 3), ('sandwich', 3), ('wings', 2), ('tapas', 2), ('steak', 2), ('salads', 2), ('jamaican', 2), ('italian', 2), ('hot_dog', 2), ('deli', 2), ('chicken', 2), ('asian', 2), ('vietnamese', 1), ('subs', 1), ('steak_house', 1), ('smoothies', 1), ('seafood', 1), ('pub', 1), ('local', 1), ('juice', 1), ('indian', 1), ('german', 1), ('drinks', 1), ('doughnuts', 1), ('donuts', 1), ('crepes', 1), ('crepe', 1), ('coffee_shop', 1), ('caribbean', 1), ('bar&grill', 1), ('bagels', 1)]
+1. Number of nodes:  824349
+2. Number of ways:  127549
+3. Number of unique users:  779
+4. Name and number of different religions:  [('christian', 43), ('jewish', 1)]
+5. Name and number of different cuisines:  [('mexican', 11), ('pizza', 8), ('burger', 7), ('american', 6), ('sandwiches', 5), ('regional', 5), ('japanese', 5), ('breakfast', 5), ('barbecue', 5), ('southern', 4), ('chinese', 4), ('thai', 3), ('sushi', 3), ('sandwich', 3), ('wings', 2), ('tapas', 2), ('steak', 2), ('salads', 2), ('jamaican', 2), ('italian', 2), ('hot_dog', 2), ('deli', 2), ('chicken', 2), ('asian', 2), ('vietnamese', 1), ('subs', 1), ('steak_house', 1), ('smoothies', 1), ('seafood', 1), ('pub', 1), ('local', 1), ('juice', 1), ('indian', 1), ('german', 1), ('drinks', 1), ('doughnuts', 1), ('donuts', 1), ('crepes', 1), ('crepe', 1), ('coffee_shop', 1), ('caribbean', 1), ('bar&grill', 1), ('bagels', 1)]
 
+IMPROVEMENT
 
 An area for improvement would be in the area of places of religion. Spartanburg is in the south and part of what used to be known as the Bible Belt. As such I would expect more places of worships. I also find it not believable that there is only 1 other type of religion. Updating the information would have to include more data analysis to see if these results are just indication if the data needs to be cleaned better or if more data needs to be added to the OpenStreetMap itself. The difficulty would be in assessing how to acquire the information on the different places of worship not already listed. 
 
 
-References:
+REFERENCES
+
 https://gist.github.com/swwelch/f1144229848b407e0a5d13fcb7fbbd6f 
 https://en.wikipedia.org/wiki/Spartanburg_County,_South_Carolina
 https://en.wikipedia.org/wiki/Bible_Belt
