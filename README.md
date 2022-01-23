@@ -12,6 +12,14 @@ FILES CREATED AND USED
 8. queries.py – sql scripts to query the database
 
 
+AREA CHOSEN
+
+Spartanburg, South Carolina
+
+https://www.openstreetmap.org/node/33979881
+
+
+
 EXPLORING AND CLEANING THE DATA
 
 I used Open Street Maps to export map data for my current town of Spartanburg, South Carolina. Using Python, I wanted to examine the data that was pulled. 
@@ -120,6 +128,7 @@ Next, I wanted to see is the street names were consistent in naming of street ty
 
 I used update.py to make the suggested updates to the city and street names. The file contained a script to verify the name changes. 
 
+
 DATABASE CREATION AND ANALYSIS
 
 I used data.py to clean the city and street name data and convert the data into csv files that could be imported into a sql database. 
@@ -135,21 +144,23 @@ The results of the queries were:
 4. Name and number of different religions:  [('christian', 43), ('jewish', 1)]
 5. Name and number of different cuisines:  [('mexican', 11), ('pizza', 8), ('burger', 7), ('american', 6), ('sandwiches', 5), ('regional', 5), ('japanese', 5), ('breakfast', 5), ('barbecue', 5), ('southern', 4), ('chinese', 4), ('thai', 3), ('sushi', 3), ('sandwich', 3), ('wings', 2), ('tapas', 2), ('steak', 2), ('salads', 2), ('jamaican', 2), ('italian', 2), ('hot_dog', 2), ('deli', 2), ('chicken', 2), ('asian', 2), ('vietnamese', 1), ('subs', 1), ('steak_house', 1), ('smoothies', 1), ('seafood', 1), ('pub', 1), ('local', 1), ('juice', 1), ('indian', 1), ('german', 1), ('drinks', 1), ('doughnuts', 1), ('donuts', 1), ('crepes', 1), ('crepe', 1), ('coffee_shop', 1), ('caribbean', 1), ('bar&grill', 1), ('bagels', 1)]
 
+
 IMPROVEMENT
 
 An area for improvement would be in the area of places of religion. Spartanburg is in the south and part of what used to be known as the Bible Belt. As such I would expect more places of worships. I also find it not believable that there is only 1 other type of religion. Updating the information would have to include more data analysis to see if these results are just indication if the data needs to be cleaned better or if more data needs to be added to the OpenStreetMap itself. The difficulty would be in assessing how to acquire the information on the different places of worship not already listed. 
 
 
+
 REFERENCES
 
-https://gist.github.com/swwelch/f1144229848b407e0a5d13fcb7fbbd6f 
-https://en.wikipedia.org/wiki/Spartanburg_County,_South_Carolina
-https://en.wikipedia.org/wiki/Bible_Belt
-https://python2to3.com/
-https://wiki.openstreetmap.org/wiki/Elements#Elements
-https://github.com/AdkinsWx/OpenStreetMap_Udacity/blob/master/Final_Code.ipynb
-https://hadrien-lcrx.github.io/notebooks/Boston_Data_Wrangling.html
-https://github.com/mspbannister/dand-p3-openstreetmap/blob/master/update.py
+1. https://gist.github.com/swwelch/f1144229848b407e0a5d13fcb7fbbd6f 
+2. https://en.wikipedia.org/wiki/Spartanburg_County,_South_Carolina
+3. https://en.wikipedia.org/wiki/Bible_Belt
+4. https://python2to3.com/
+5. https://wiki.openstreetmap.org/wiki/Elements#Elements
+6. https://github.com/AdkinsWx/OpenStreetMap_Udacity/blob/master/Final_Code.ipynb
+7. https://hadrien-lcrx.github.io/notebooks/Boston_Data_Wrangling.html
+8. https://github.com/mspbannister/dand-p3-openstreetmap/blob/master/update.py
 
 
 
